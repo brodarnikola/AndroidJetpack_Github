@@ -12,6 +12,21 @@
         tools:layout="@layout/fragment_view_pager">
 
         <action
+            android:id="@+id/action_language_detail_fragment_to_languages_fragment"
+            app:destination="@id/view_pager_fragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+        <action
+            android:id="@+id/action_language_detail_fragment_to_slideshow_fragment"
+            app:destination="@id/nav_slideshow"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
                 android:id="@+id/action_view_pager_fragment_to_language_details_fragment"
                 app:destination="@id/language_details_fragment"
                 app:enterAnim="@anim/slide_in_right"
