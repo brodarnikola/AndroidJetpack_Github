@@ -13,10 +13,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Github">
         <activity
-            android:name=".Proba"
-            android:label="@string/title_activity_proba"
-            android:theme="@style/Theme.Github.NoActionBar"></activity>
-        <activity
             android:name=".LanguagesActivity"
             android:theme="@style/Theme.Github.NoActionBar">
             <intent-filter>

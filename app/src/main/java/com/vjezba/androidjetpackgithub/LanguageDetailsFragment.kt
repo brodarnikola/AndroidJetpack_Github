@@ -18,9 +18,7 @@ package com.vjezba.androidjetpackgithub
 
 import android.content.Intent
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
 import androidx.coordinatorlayout.widget.CoordinatorLayout
 import androidx.core.app.ShareCompat
 import androidx.core.widget.NestedScrollView
@@ -36,6 +34,7 @@ import com.vjezba.androidjetpackgithub.data.Languages
 import com.vjezba.androidjetpackgithub.databinding.FragmentLanguageDetailsBinding
 import com.vjezba.androidjetpackgithub.utilities.InjectorUtils
 import com.vjezba.androidjetpackgithub.viewmodels.LanguageDetailsViewModel
+import kotlinx.android.synthetic.main.activity_languages_main.*
 
 /**
  * A fragment representing a single Plant detail screen.
@@ -100,11 +99,7 @@ class LanguageDetailsFragment : Fragment() {
                 view.findNavController().navigateUp()
             }*/
 
-            ivShare.setOnClickListener {
-                createShareIntent()
-            }
-
-            /*toolbar.setOnMenuItemClickListener { item ->
+            activity?.toolbar?.setOnMenuItemClickListener { item ->
                 when (item.itemId) {
                     R.id.action_share -> {
                         createShareIntent()
@@ -112,11 +107,15 @@ class LanguageDetailsFragment : Fragment() {
                     }
                     else -> false
                 }
-            }*/
+            }
         }
         setHasOptionsMenu(true)
 
         return binding.root
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        inflater.inflate(R.menu.menu_language_details, menu)
     }
 
     private fun navigateToGallery() {
@@ -151,9 +150,9 @@ class LanguageDetailsFragment : Fragment() {
     //
     // This is adapted from Chris Banes' Stack Overflow answer: https://stackoverflow.com/a/41442923
     private fun hideAppBarFab(fab: FloatingActionButton) {
-        val params = fab.layoutParams as CoordinatorLayout.LayoutParams
-        val behavior = params.behavior as FloatingActionButton.Behavior
-        behavior.isAutoHideEnabled = false
+        //val params = fab.layoutParams as CoordinatorLayout.LayoutParams
+        //val behavior = params.behavior as FloatingActionButton.Behavior
+        //behavior.isAutoHideEnabled = false
         fab.hide()
     }
 

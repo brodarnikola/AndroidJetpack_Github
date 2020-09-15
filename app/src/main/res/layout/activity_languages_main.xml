@@ -22,6 +22,22 @@
 
     <include layout="@layout/activity_languages_content_main" />
 
+    <com.leinardi.android.speeddial.SpeedDialOverlayLayout
+        android:id="@+id/overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.leinardi.android.speeddial.SpeedDialView
+        android:id="@+id/speedDial"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+
+        app:sdExpansionMode="top"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:sdMainFabClosedSrc="@drawable/ic_add_24dp"
+        app:sdOverlayLayout="@+id/overlay"/>
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

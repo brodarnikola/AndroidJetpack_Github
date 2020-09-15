@@ -70,13 +70,6 @@ class GalleryFragment : Fragment() {
 
         activity?.toolbar?.title = getString(R.string.gallery_title) + ": " + args.languageName
 
-        /*binding.toolbar.title = getString(R.string.gallery_title) + ": " + args.languageName
-
-        binding.toolbar.setNavigationOnClickListener { view ->
-            view.findNavController().navigateUp()
-        }*/
-
-
         adapter.addLoadStateListener { loadState ->
             binding.languageListRepository.isVisible = loadState.source.refresh is LoadState.NotLoading
             // Show loading spinner during initial load or refresh.
