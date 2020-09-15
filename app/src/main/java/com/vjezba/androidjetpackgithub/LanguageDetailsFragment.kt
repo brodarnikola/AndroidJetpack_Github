@@ -69,6 +69,7 @@ class LanguageDetailsFragment : Fragment() {
                 }
             }
 
+            activity?.speedDial?.visibility = View.GONE
             galleryNav.setOnClickListener { navigateToGallery() }
 
             var isToolbarShown = false

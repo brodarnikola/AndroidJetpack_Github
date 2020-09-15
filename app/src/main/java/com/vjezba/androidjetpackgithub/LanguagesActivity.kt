@@ -75,17 +75,17 @@ class LanguagesActivity : AppCompatActivity() {
         speedDialView.setOnActionSelectedListener { speedDialActionItem ->
             when (speedDialActionItem.id) {
                 R.id.action_dogo1 -> {
-                    val direction =
+                    /*val direction =
                         HomeViewPagerFragmentDirections.actionLanguageDetailFragmentToLanguagesFragment()
-                    navController.navigate(direction)
+                    navController.navigate(direction)*/
                     //navController.navigate(R.id.view_pager_fragment)
                     Toast.makeText(this, "Doggo1 action clicked!", Toast.LENGTH_LONG).show()
                     false // true to keep the Speed Dial open
                 }
                 R.id.action_dogo2 -> {
-                    val direction =
+                    /* val direction =
                         HomeViewPagerFragmentDirections.actionLanguageDetailFragmentToSlideshowFragment()
-                    navController.navigate(direction)
+                    navController.navigate(direction)*/
                     //navController.navigate(R.id.nav_slideshow)
                     Toast.makeText(this, "Doggo2 action clicked!", Toast.LENGTH_LONG).show()
                     false // true to keep the Speed Dial open

@@ -11,6 +11,7 @@ import com.vjezba.androidjetpackgithub.adapters.ALL_GITHUBS
 import com.vjezba.androidjetpackgithub.adapters.GithubPagerAdapter
 import com.vjezba.androidjetpackgithub.adapters.SAVED_GITHUB_REPOSITORIES
 import com.vjezba.androidjetpackgithub.databinding.FragmentViewPagerBinding
+import kotlinx.android.synthetic.main.activity_languages_main.*
 
 
 /**
@@ -29,6 +30,7 @@ class HomeViewPagerFragment : Fragment() {
         val tabLayout = binding.tabs
         val viewPager = binding.viewPager
 
+        activity?.speedDial?.visibility = View.VISIBLE
         viewPager.adapter = GithubPagerAdapter(this)
 
         // Set the icon and text for each tab
