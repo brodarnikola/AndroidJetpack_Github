@@ -68,6 +68,7 @@ class GalleryFragment : Fragment() {
         binding.languageListRepository.adapter = adapter
         search(args.languageName)
 
+        activity?.speedDial?.visibility = View.GONE
         activity?.toolbar?.title = getString(R.string.gallery_title) + ": " + args.languageName
 
         adapter.addLoadStateListener { loadState ->
